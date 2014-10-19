@@ -1,0 +1,36 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_10/p4 'unimax' 'submission_52' 'submission_52' cpp 0.1 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Mar 12 21:32:31 IST 2014
+Language: cpp
+Time Limit: 0.1 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+3 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.cpp EasySandbox.so err runcode.sh submission52 timeout /var/www/codecracker/tester/jail-7831
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 2 ===
+. .. cerr code.cpp correctout EasySandbox.so err out runcode.sh submission52 timeout /var/www/codecracker/tester/jail-7831
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 3 ===
+. .. cerr code.cpp correctout EasySandbox.so err out runcode.sh submission52 timeout /var/www/codecracker/tester/jail-7831
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

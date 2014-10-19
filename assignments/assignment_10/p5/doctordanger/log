@@ -1,0 +1,24 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_10/p5 'doctordanger' 'submission_90' 'submission_90' cpp 0.5 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Mar 12 23:20:16 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+1 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.cpp EasySandbox.so err runcode.sh submission90 timeout /var/www/codecracker/tester/jail-9738
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

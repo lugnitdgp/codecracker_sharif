@@ -1,0 +1,22 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p3 'mjnovice' 'a' 'a-25' py2 1.5 2 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Tue Apr  8 21:29:03 IST 2014
+Language: py2
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+Python Shield: false
+Checking Python Syntax
+Syntax checked. Exit Code=0
+
+Testing...
+1 Tests Cases
+
+=== TEST 1 ===
+. .. a-25.py a-25.pyo cerr err runcode.sh timeout /var/www/codecracker/tester/jail-29409
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

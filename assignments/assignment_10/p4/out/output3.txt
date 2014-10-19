@@ -1,0 +1,7 @@
+Yes 2 
+No 0 
+Yes 1 
+Yes 3 
+Yes 2 
+Yes 1 
+No 0 

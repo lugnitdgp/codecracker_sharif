@@ -1,0 +1,18 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_8/p1 'livewire' 'submission_15' 'submission_15' c 0.5 1 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Sun Feb  2 16:19:13 IST 2014
+Language: c
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as c
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=1
+Compile Error
+In file included from shield.c:22:0:
+code.c:92:1: error: unknown type name ‘ur’
+code.c:92:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘here’

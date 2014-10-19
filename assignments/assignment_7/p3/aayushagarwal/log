@@ -1,0 +1,79 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p3 'aayushagarwal' 'submission_72' 'submission_72' cpp 1.5 2 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Thu Jan 30 20:22:37 IST 2014
+Language: cpp
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as cpp
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=0
+
+Testing...
+10 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c def.h EasySandbox.so err runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 2 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 3 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 4 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 5 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 6 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 7 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 8 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 9 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 10 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission72 timeout /var/www/codecracker/tester/jail-14445
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

@@ -1,0 +1,20 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p2 'kanish' 'submission_138' 'submission_138' c 1.5 2 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Thu Jan 30 21:57:44 IST 2014
+Language: c
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as c
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=1
+Compile Error
+In file included from shield.c:22:0:
+code.c: In function ‘themainmainfunction’:
+code.c:12:5: error: expected ‘;’ before ‘int’
+code.c:15:17: error: ‘a’ undeclared (first use in this function)
+code.c:15:17: note: each undeclared identifier is reported only once for each function it appears in

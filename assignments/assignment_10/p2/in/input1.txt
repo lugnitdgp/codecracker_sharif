@@ -1,0 +1,28 @@
+2
+5 5
+82 Anuj Kumar
+57 Bill gates
+78 Satya Nedella
+12 Tarkeshwar Kumar Mehta
+1005 M K Mondal
+82 58
+57 89
+82 90
+78 5
+12 78
+5 10
+1 dsgkfsd sdkfjsd fdskds
+2 dskfjsd dskfhsdk sdgksd 
+2348 sdkfjgsdfk dskfhsjd f
+2349873 sdkjfsdhk
+23878 d d k
+1 13
+1 839
+1 32487
+2349873 4857
+2349873 327482
+23878 623 
+2 38484
+2348 34623
+2348 4738543
+2348 123

@@ -1,0 +1,30 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p1 'anuj' 'beads_code' 'beads_code-1' cpp 0.5 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Mon Apr  7 19:35:51 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+2 Tests Cases
+
+=== TEST 1 ===
+. .. beadscode1 cerr code.cpp EasySandbox.so err runcode.sh timeout /var/www/codecracker/tester/jail-31390
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 2 ===
+. .. beadscode1 cerr code.cpp correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-31390
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

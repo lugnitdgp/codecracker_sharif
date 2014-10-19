@@ -1,0 +1,24 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_6/p1 'jin' 'test' 'test-64' c 0.5 1 50000 1048576 diff -bB 1 1 0 0 0
+Starting tester...
+Thu Jan 30 16:48:39 IST 2014
+Language: c
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as c
+Enabling EasySandbox
+Compiled. Exit Code=1
+Compile Error
+code.c:3:15: error: conflicting types for ‘t’
+code.c:2:5: note: previous declaration of ‘t’ was here
+code.c:6:8: error: expected declaration specifiers or ‘...’ before string constant
+code.c:7:7: error: expected declaration specifiers or ‘...’ before string constant
+code.c:7:12: error: expected declaration specifiers or ‘...’ before ‘&’ token
+code.c:9:8: error: expected declaration specifiers or ‘...’ before string constant
+code.c:10:7: error: expected declaration specifiers or ‘...’ before string constant
+code.c:10:12: error: expected declaration specifiers or ‘...’ before ‘&’ token
+code.c:14:1: error: expected identifier or ‘(’ before ‘if’
+code.c:16:1: error: expected identifier or ‘(’ before ‘else’

@@ -1,0 +1,31 @@
+3
+5 10
+324 dsgjfs ddsgfjsd dsjgfsjd
+322 sakdasd
+982 dskfshdkf dskhf sdfkshdf
+3872 sdka sahd sahd
+21 dshkfsd dskfhsd
+21 2194
+21 3280
+324 847373
+322 111
+324 329879
+322 3298329
+324 2989
+324 2899
+324 283
+324 8999
+2 4
+1 dshksdhfksdf sdkhfjs ksdhfjfsd
+100000 sahkdfjs sdkhfsd dshkfhsd
+1 100
+100000 100
+1 200
+100000 200
+3 4
+1 shkjsd dshkfs sdkhfs
+189 dskhfjs dksdhjfsd sdfhkfjs
+4 dshkfjshdkfs
+1 0
+4 0
+189 0

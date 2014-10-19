@@ -1,0 +1,107 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p5 'karanaggarwal' 'a' 'a-98' py2 6 7 50000 1048576 diff -bB 1 1 0 1 0
+Starting tester...
+Thu Jan 30 21:16:46 IST 2014
+Language: py2
+Time Limit: 6 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+Python Shield: true
+Checking Python Syntax
+Syntax checked. Exit Code=0
+Enabling Shield For Python 2
+
+Testing...
+5 Tests Cases
+
+=== TEST 1 ===
+. .. a-98.py a-98.pyo cerr err runcode.sh timeout /var/www/codecracker/tester/jail-6987
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "a-98.py", line 20, in <module>
+    t = input()
+NameError: name 'input' is not defined
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 2 ===
+. .. a-98.py a-98.pyo cerr err out runcode.sh timeout /var/www/codecracker/tester/jail-6987
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "a-98.py", line 20, in <module>
+    t = input()
+NameError: name 'input' is not defined
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 3 ===
+. .. a-98.py a-98.pyo cerr err out runcode.sh timeout /var/www/codecracker/tester/jail-6987
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "a-98.py", line 20, in <module>
+    t = input()
+NameError: name 'input' is not defined
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 4 ===
+. .. a-98.py a-98.pyo cerr err out runcode.sh timeout /var/www/codecracker/tester/jail-6987
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "a-98.py", line 20, in <module>
+    t = input()
+NameError: name 'input' is not defined
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 5 ===
+. .. a-98.py a-98.pyo cerr err out runcode.sh timeout /var/www/codecracker/tester/jail-6987
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "a-98.py", line 20, in <module>
+    t = input()
+NameError: name 'input' is not defined
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+Score from 10000: 0

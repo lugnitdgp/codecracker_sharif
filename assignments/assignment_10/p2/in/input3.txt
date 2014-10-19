@@ -1,0 +1,26 @@
+3
+5 0
+1 dshkfsdd
+2 ewrwe dsgkfsd dsgkfsdf
+3 skdhsdk dskgfsdkf sdkfsdsdkhfksdsdkf
+4 shdkjfshdkf sdhkfjshdkf
+1000 shkjhfsdkjfh dshkfjsdfhksdjfhsdkjfhsd
+5 5
+23 ahskdaskd dsakhd dshkad
+21 dshkf khsdf dskhfjsdhf
+20 dshkfsd fkhsdjf sdkfh
+10000 sahdks ksdhfhskd sdkfshdkf
+1000000000 dshkfsh dfkhsdjfds sdkhfjsd
+23 939393
+21 893494
+20 8439439
+10000 3289423
+1000000000 7
+3 3
+1 dhskfhsd
+2 dshkfhsd dskhfj sdksfdhf
+3 dshkfjhsdkf
+1 10000
+2 10001
+3 89329
+

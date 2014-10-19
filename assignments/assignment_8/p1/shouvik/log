@@ -1,0 +1,21 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_8/p1 'shouvik' 'harshit' 'harshit-2' cpp 0.5 1 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Sun Feb  2 14:13:49 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as cpp
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=1
+Compile Error
+In file included from shield.cpp:22:0:
+code.c:3:6: error: ISO C++ forbids declaration of ‘themainmainfunction’ with no type [-fpermissive]
+code.c: In function ‘int themainmainfunction()’:
+code.c:5:2: error: ‘cout’ was not declared in this scope
+code.c:5:2: note: suggested alternative:
+/usr/lib/gcc/x86_64-amazon-linux/4.6.3/../../../../include/c++/4.6.3/iostream:62:18: note:   ‘std::cout’

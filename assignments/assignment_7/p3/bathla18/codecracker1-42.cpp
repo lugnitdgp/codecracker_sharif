@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdio>
+int main()
+{
+
+    int test;
+    scanf ( "%d", &test );
+    while (test--){
+        int n;
+        scanf ( "%d", &n);
+        int a;
+        int min = 10000,max =0;
+        int sum = 0;
+        for ( int i = 0; i < n; i++){
+            scanf ( "%d", &a);
+            sum += a;
+            if ( max < a){
+                max = a;
+            }
+            if ( min > a ){
+                min = a;
+            }
+        }
+        if ( sum % n == 0) {
+            printf ( "%d", (max-min)/2);
+        }else {
+            printf ( "ANGRY");
+        }
+    }
+    return 0;
+}

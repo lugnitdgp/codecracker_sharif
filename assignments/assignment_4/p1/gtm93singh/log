@@ -1,0 +1,28 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_4/p1 'gtm93singh' 'submission_8' 'submission_8' c 2 3 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Mon Jan 27 13:39:48 UTC 2014
+Language: c
+Time Limit: 2 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as c
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+2 Tests Cases
+
+=== TEST 1 ===
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 2 ===
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0

@@ -1,0 +1,37 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_8/p2 'oblivions' 'submission_7' 'submission_7' cpp 0.5 1 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Sun Feb  2 15:53:10 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as cpp
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=0
+
+Testing...
+3 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c def.h EasySandbox.so err runcode.sh shield.cpp submission7 timeout /var/www/codecracker/tester/jail-2510
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 2 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission7 timeout /var/www/codecracker/tester/jail-2510
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 3 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.cpp submission7 timeout /var/www/codecracker/tester/jail-2510
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

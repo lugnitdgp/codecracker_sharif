@@ -1,0 +1,32 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p3 'svishal' 'submission_36' 'submission_36' java 2 3 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Tue Apr  8 22:03:32 IST 2014
+Language: java
+Time Limit: 2 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+JAVA_POLICY: "-Djava.security.manager -Djava.security.policy=java.policy"
+Compiling as Java
+Compiled. Exit Code=0
+
+Testing...
+1 Tests Cases
+
+=== TEST 1 ===
+. .. cerr err java.policy runcode.sh submission_36.java timeout x.class /var/www/codecracker/tester/jail-23421
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+Exception in thread "main" java.lang.NoClassDefFoundError: submission_36
+Caused by: java.lang.ClassNotFoundException: submission_36
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: submission_36. Program will exit.
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+Score from 10000: 0

@@ -1,0 +1,93 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_6/p1 'dhanush' 'national_word' 'national_word-113' py2 1.5 2 50000 1048576 diff -bB 1 1 0 1 1
+Starting tester...
+Tue Jan 28 20:59:54 IST 2014
+Language: py2
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+Python Shield: true
+Checking Python Syntax
+Syntax checked. Exit Code=0
+Enabling Shield For Python 2
+
+Testing...
+4 Tests Cases
+
+=== TEST 1 ===
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "national_word-113.py", line 37, in <module>
+    comb = iterator(word, i)
+  File "national_word-113.py", line 25, in iterator
+    return [i for i in itertools.product(word, repeat=n)]
+MemoryError
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 2 ===
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "national_word-113.py", line 37, in <module>
+    comb = iterator(word, i)
+  File "national_word-113.py", line 25, in iterator
+    return [i for i in itertools.product(word, repeat=n)]
+MemoryError
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 3 ===
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "national_word-113.py", line 37, in <module>
+    comb = iterator(word, i)
+  File "national_word-113.py", line 25, in iterator
+    return [i for i in itertools.product(word, repeat=n)]
+MemoryError
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 4 ===
+Exit Code = 1
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Traceback (most recent call last):
+  File "national_word-113.py", line 37, in <module>
+    comb = iterator(word, i)
+  File "national_word-113.py", line 25, in iterator
+    return [i for i in itertools.product(word, repeat=n)]
+MemoryError
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+Score from 10000: 0

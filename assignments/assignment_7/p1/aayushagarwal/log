@@ -1,0 +1,66 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p1 'aayushagarwal' 'codecracker' 'codecracker-141' cpp 1 2 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Feb 19 19:52:52 IST 2014
+Language: cpp
+Time Limit: 1 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+8 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.cpp codecracker141 EasySandbox.so err runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 2 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 3 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 4 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 5 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 6 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 7 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+=== TEST 8 ===
+. .. cerr code.cpp codecracker141 correctout EasySandbox.so err out runcode.sh timeout /var/www/codecracker/tester/jail-12359
+Exit Code = 0
+Time: 0.00 s
+ACCEPTED
+
+Score from 10000: 10000

@@ -1,0 +1,79 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p3 'kanish' 'submission_85' 'submission_85' c 1.5 2 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Thu Jan 30 20:51:07 IST 2014
+Language: c
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as c
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=0
+
+Testing...
+10 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c def.h EasySandbox.so err runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 2 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 3 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 4 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 5 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 6 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 7 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 8 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 9 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 10 ===
+. .. cerr code.c correctout def.h EasySandbox.so err out runcode.sh shield.c submission85 timeout /var/www/codecracker/tester/jail-3794
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0

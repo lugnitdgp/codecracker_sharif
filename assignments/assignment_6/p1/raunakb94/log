@@ -1,0 +1,17 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_6/p1 'raunakb94' 'submission_4' 'submission_4' cpp 0.5 1 50000 1048576 diff -bB 1 1 0 0 0
+Starting tester...
+Thu Jan 30 16:48:44 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=1
+Compile Error
+/usr/lib/gcc/x86_64-amazon-linux/4.6.3/../../../../lib64/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: ld returned 1 exit status

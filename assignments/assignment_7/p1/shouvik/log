@@ -1,0 +1,65 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_7/p1 'shouvik' 'submission_1' 'submission_1' py2 3 4 50000 1048576 diff -bB 1 1 0 1 0
+Starting tester...
+Thu Jan 30 20:45:07 IST 2014
+Language: py2
+Time Limit: 3 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+Python Shield: true
+Checking Python Syntax
+Syntax checked. Exit Code=0
+Enabling Shield For Python 2
+
+Testing...
+8 Tests Cases
+
+=== TEST 1 ===
+. .. cerr err runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 2 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 3 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 4 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 5 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 6 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 7 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 8 ===
+. .. cerr correctout err out runcode.sh submission_1.py submission_1.pyo timeout /var/www/codecracker/tester/jail-30239
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0

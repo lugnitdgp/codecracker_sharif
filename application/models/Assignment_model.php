@@ -1,0 +1,309 @@
+<?php
+
+/**
+ * Sharif Judge online judge
+ * @file Assignment_model.php
+ * @author Mohammad Javad Naderi <mjnaderi@gmail.com>
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Assignment_model extends CI_Model {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Adds new assignment to database
+     */
+    public function add_assignment($id, $edit = FALSE) {
+        // Adding assignment to "assignments" table (or editing existing assignment)
+        $extra_items = explode('*', $this->input->post('extra_time'));
+        $extra_time = 1;
+        foreach ($extra_items as $extra_item) {
+            $extra_time *= $extra_item;
+        }
+        $assignment = array(
+            'id' => $id,
+            'name' => $this->input->post('assignment_name'),
+            'problems' => $this->input->post('number_of_problems'),
+            'total_submits' => 0,
+            'open' => ($this->input->post('open') === NULL ? 0 : 1),
+            'scoreboard' => ($this->input->post('scoreboard') === NULL ? 0 : 1),
+            'description' => '', /* todo */
+            'start_time' => date('Y-m-d H:i:s', strtotime($this->input->post('start_time'))),
+            'finish_time' => date('Y-m-d H:i:s', strtotime($this->input->post('finish_time'))),
+            'extra_time' => $extra_time * 60,
+            'late_rule' => $this->input->post('late_rule'),
+            'participants' => $this->input->post('participants')
+        );
+        if ($edit) {
+            $before = $this->db->get_where('assignments', array('id' => $id))->row_array();
+            unset($assignment['total_submits']);
+            $this->db->where('id', $id)->update('assignments', $assignment);
+            if ($assignment['extra_time'] != $before['extra_time'] OR $assignment['start_time'] != $before['start_time'] OR $assignment['finish_time'] != $before['finish_time'] OR $assignment['late_rule'] != $before['late_rule']) {
+                // each time we edit an assignment, we should update coefficient of all submissions of that assignment
+                $this->_update_coefficients($id, $assignment['extra_time'], $assignment['finish_time'], $assignment['late_rule']);
+                // each time we edit an assignment, we should update scoreboard of that assignment
+                $this->load->model('scoreboard_model');
+                $this->scoreboard_model->update_scoreboard($id);
+            } elseif ($assignment['scoreboard'] && !$before['scoreboard']) {
+                // each time we enable scoreboard of an assignment, we should update scoreboard of that assignment
+                $this->load->model('scoreboard_model');
+                $this->scoreboard_model->update_scoreboard($id);
+            }
+        }
+        else
+            $this->db->insert('assignments', $assignment);
+
+        // Adding problems to "problems" table
+        //first remove all previous problems
+        $this->db->delete('problems', array('assignment' => $id));
+
+        //now add new problems:
+        $names = $this->input->post('name');
+        $statements = $this->input->post('statement');
+        $scores = $this->input->post('score');
+        $c_tl = $this->input->post('c_time_limit');
+        $py_tl = $this->input->post('python_time_limit');
+        $java_tl = $this->input->post('java_time_limit');
+        $ml = $this->input->post('memory_limit');
+        $ft = $this->input->post('languages');
+        $dc = $this->input->post('diff_cmd');
+        $da = $this->input->post('diff_arg');
+        $uo = $this->input->post('is_upload_only');
+        if ($uo === NULL)
+            $uo = array();
+        for ($i = 1; $i <= $this->input->post('number_of_problems'); $i++) {
+            $items = explode(',', $ft[$i - 1]);
+            $ft[$i - 1] = '';
+            foreach ($items as $item) {
+                $item = trim($item);
+                $item2 = strtolower($item);
+                $item = ucfirst($item2);
+                if ($item2 === 'python2')
+                    $item = 'Python 2';
+                elseif ($item2 === 'python3')
+                    $item = 'Python 3';
+                elseif ($item2 === 'pdf')
+                    $item = 'PDF';
+                $item2 = strtolower($item);
+                if (!in_array($item2, array('c', 'c++', 'python 2', 'python 3', 'java', 'zip', 'pdf')))
+                    continue;
+                // If the problem is not Upload-Only, its language should be one of {C,C++,Python 2, Python 3,Java}
+                if (!in_array($i, $uo) && !in_array($item2, array('c', 'c++', 'python 2', 'python 3', 'java')))
+                    continue;
+                $ft[$i - 1] .= $item . ",";
+            }
+            $ft[$i - 1] = substr($ft[$i - 1], 0, strlen($ft[$i - 1]) - 1); // remove last ','
+            $problem = array(
+                'assignment' => $id,
+                'id' => $i,
+                'name' => $names[$i - 1],
+                'statement' => $statements[$i - 1],
+                'score' => $scores[$i - 1],
+                'is_upload_only' => in_array($i, $uo) ? 1 : 0,
+                'c_time_limit' => $c_tl[$i - 1],
+                'python_time_limit' => $py_tl[$i - 1],
+                'java_time_limit' => $java_tl[$i - 1],
+                'memory_limit' => $ml[$i - 1],
+                'allowed_languages' => $ft[$i - 1],
+                'diff_cmd' => $dc[$i - 1],
+                'diff_arg' => $da[$i - 1],
+            );
+            $this->db->insert('problems', $problem);
+        }
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function delete_assignment($assignment_id, $delete_codes) {
+        $this->db->delete('assignments', array('id' => $assignment_id));
+        $this->db->delete('problems', array('assignment' => $assignment_id));
+        $this->db->delete('all_submissions', array('assignment' => $assignment_id));
+        $this->db->delete('final_submissions', array('assignment' => $assignment_id));
+        if ($delete_codes) {
+            $cmd = 'rm -r ' . rtrim($this->settings_model->get_setting('assignments_root'), '/') . '/assignment_' . $assignment_id;
+            shell_exec($cmd);
+        }
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Returns a list of all assignments and their information
+     */
+    public function all_assignments() {
+        return $this->db->get('assignments')->result_array();
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Returns id of new assignment (the assignment to be added). Used for adding new assignment.
+     */
+    public function new_assignment_id() {
+        $assignments = $this->db->select('id')->get('assignments')->result_array();
+        $max = 0;
+        foreach ($assignments as $assignment) {
+            if ($assignment['id'] > $max)
+                $max = $assignment['id'];
+        }
+        $max++;
+        while (file_exists(rtrim($this->settings_model->get_setting('assignments_root'), '/') . '/assignment_' . $max)) {
+            $max++;
+        }
+        return $max;
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function all_problems($assignment_id) {
+        $problems = $this->db->get_where('problems', array('assignment' => $assignment_id))->result_array();
+        $this->load->model('submit_model');
+        //print_r($problems);
+        $i = 0;
+        foreach ($problems as $problem):
+            $problems[$i]['numOfSubmissions'] = $this->submit_model->count_all_submissions($this->assignment['id'], 0, NULL, NULL, $problem['id']);
+            $i++;
+        endforeach;
+        return $problems;
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function problem_info($assignment_id, $problem_id) {
+        return $this->db->get_where('problems', array('assignment' => $assignment_id, 'id' => $problem_id))->row_array();
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Returns info about given assignment
+     */
+    public function assignment_info($assignment_id) {
+        $query = $this->db->get_where('assignments', array('id' => $assignment_id));
+        if ($query->num_rows() != 1)
+            return array(
+                'id' => 0,
+                'name' => 'Not Selected',
+                'finish_time' => 0,
+                'extra_time' => 0,
+                'problems' => 0
+            );
+        return $query->row_array();
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Returns TRUE if $username if one of the $participants
+     * Examples for participants: "ALL" or "user1, user2,user3"
+     */
+    public function is_participant($participants, $username) {
+        $participants = explode(',', $participants);
+        foreach ($participants as &$participant) {
+            $participant = trim($participant);
+        }
+        if (in_array('ALL', $participants))
+            return TRUE;
+        if (in_array($username, $participants))
+            return TRUE;
+        return FALSE;
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function add_total_submits($assignment_id) {
+        $total = $this->db->select('total_submits')->get_where('assignments', array('id' => $assignment_id))->row()->total_submits;
+        $this->db->where('id', $assignment_id)->update('assignments', array('total_submits' => ($total + 1)));
+        return ($total + 1);
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function set_moss_time($assignment_id) {
+        $now = date('Y-m-d H:i:s', shj_now());
+        $this->db->where('id', $assignment_id)->update('assignments', array('moss_update' => $now));
+    }
+
+    // ------------------------------------------------------------------------
+
+
+    public function get_moss_time($assignment_id) {
+        $query = $this->db->select('moss_update')->get_where('assignments', array('id' => $assignment_id));
+        if ($query->num_rows() != 1)
+            return 'Never';
+        return $query->row()->moss_update;
+    }
+
+    // ------------------------------------------------------------------------
+
+
+
+
+    private function _update_coefficients($assignment_id, $extra_time, $finish_time, $new_late_rule) {
+
+        $all_submissions = $this->db->get_where('all_submissions', array('assignment' => $assignment_id))->result_array();
+        $final_submissions = $this->db->get_where('final_submissions', array('assignment' => $assignment_id))->result_array();
+
+        $finish_time = strtotime($finish_time);
+
+
+        // Update Coefficients in table 'all_submissions'
+        foreach ($all_submissions as $i => $item) {
+            $delay = strtotime($item['time']) - $finish_time;
+            ob_start();
+            if (eval($new_late_rule) === FALSE)
+                $coefficient = "error";
+            if (!isset($coefficient))
+                $coefficient = "error";
+            ob_end_clean();
+            $all_submissions[$i]['coefficient'] = $coefficient;
+        }
+        // For better performance, we update each 1000 rows in one SQL query
+        $size = count($all_submissions);
+        for ($i = 0; $i <= ($size - 1) / 1000; $i++) {
+            $query = 'UPDATE ' . $this->db->dbprefix('all_submissions') . " SET coefficient = CASE\n";
+            for ($j = 1000 * $i; $j < 1000 * ($i + 1) && $j < $size; $j++) {
+                $item = $all_submissions[$j];
+                $query.="WHEN assignment='" . $assignment_id . "' AND problem='" . $item['problem'] . "' AND username='" . $item['username'] . "' AND submit_id='" . $item['submit_id'] . "' THEN " . $item['coefficient'] . "\n";
+            }
+            $query.="END";
+            $this->db->simple_query($query);
+        }
+
+
+        // Update Coefficients in table 'final_submissions'
+        foreach ($final_submissions as $i => $item) {
+            $delay = strtotime($item['time']) - $finish_time;
+            ob_start();
+            if (eval($new_late_rule) === FALSE)
+                $coefficient = "error";
+            if (!isset($coefficient))
+                $coefficient = "error";
+            ob_end_clean();
+            $final_submissions[$i]['coefficient'] = $coefficient;
+        }
+        // For better performance, we update each 1000 rows in one SQL query
+        $size = count($final_submissions);
+        for ($i = 0; $i <= ($size - 1) / 1000; $i++) {
+            $query = 'UPDATE ' . $this->db->dbprefix('final_submissions') . " SET coefficient = CASE\n";
+            for ($j = 1000 * $i; $j < 1000 * ($i + 1) && $j < $size; $j++) {
+                $item = $final_submissions[$j];
+                $query.="WHEN assignment='" . $assignment_id . "' AND problem='" . $item['problem'] . "' AND username='" . $item['username'] . "' AND submit_id='" . $item['submit_id'] . "' THEN " . $item['coefficient'] . "\n";
+            }
+            $query.="END";
+            $this->db->simple_query($query);
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_10/p5 'sagar0907' 'submission_98' 'submission_98' c 0.5 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Mar 12 23:58:31 IST 2014
+Language: c
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as c
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+1 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c EasySandbox.so err runcode.sh submission98 timeout /var/www/codecracker/tester/jail-24546
+Exit Code = 137
+Time: 0.00 s
+Killed
+
+Score from 10000: 0

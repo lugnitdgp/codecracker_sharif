@@ -1,0 +1,24 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p3 'santosh2614' 'cc1' 'cc1-58' cpp 0.5 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Tue Apr  8 22:40:13 IST 2014
+Language: cpp
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+1 Tests Cases
+
+=== TEST 1 ===
+. .. cc158 cerr code.cpp EasySandbox.so err runcode.sh timeout /var/www/codecracker/tester/jail-10789
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0

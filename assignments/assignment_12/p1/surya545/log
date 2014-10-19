@@ -1,0 +1,39 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p1 'surya545' 'submission_77' 'submission_77' c 1 2 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Apr  9 00:29:16 IST 2014
+Language: c
+Time Limit: 1 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as c
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+2 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c EasySandbox.so err runcode.sh submission77 timeout /var/www/codecracker/tester/jail-23519
+Exit Code = 136
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+<<entering SECCOMP mode>>
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 2 ===
+. .. cerr code.c EasySandbox.so err out runcode.sh submission77 timeout /var/www/codecracker/tester/jail-23519
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0

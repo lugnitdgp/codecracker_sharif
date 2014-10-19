@@ -1,0 +1,16 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_6/p2 'abhicool' 'submission_109' 'submission_109' cpp 1.5 2 50000 1048576 diff -bB 1 1 0 0 0
+Starting tester...
+Thu Jan 30 16:48:34 IST 2014
+Language: cpp
+Time Limit: 1.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=1
+Compile Error
+code.cpp:2:21: fatal error: iostream.h: No such file or directory
+compilation terminated.

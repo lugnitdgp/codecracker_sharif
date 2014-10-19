@@ -1,0 +1,60 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_10/p4 'saanc' 'editor2' 'editor2-81' cpp 0.1 1 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Wed Mar 12 22:51:01 IST 2014
+Language: cpp
+Time Limit: 0.1 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as cpp
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+3 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.cpp EasySandbox.so editor281 err runcode.sh timeout /var/www/codecracker/tester/jail-20673
+Exit Code = 123
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 2 ===
+. .. cerr code.cpp EasySandbox.so editor281 err out runcode.sh timeout /var/www/codecracker/tester/jail-20673
+Exit Code = 123
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 3 ===
+. .. cerr code.cpp EasySandbox.so editor281 err out runcode.sh timeout /var/www/codecracker/tester/jail-20673
+Exit Code = 123
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+Score from 10000: 0

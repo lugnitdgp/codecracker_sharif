@@ -1,0 +1,64 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_8/p2 'anuj' 'submission_14' 'submission_14' c 0.5 1 50000 1048576 diff -bB 1 1 1 0 0
+Starting tester...
+Sun Feb  2 16:19:03 IST 2014
+Language: c
+Time Limit: 0.5 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: true
+Compiling as c
+Enabling EasySandbox
+Enabling Shield For C/C++
+Compiled. Exit Code=0
+
+Testing...
+3 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c def.h EasySandbox.so err runcode.sh shield.c submission14 timeout /var/www/codecracker/tester/jail-428
+Exit Code = 139
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+<<entering SECCOMP mode>>
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 2 ===
+. .. cerr code.c def.h EasySandbox.so err out runcode.sh shield.c submission14 timeout /var/www/codecracker/tester/jail-428
+Exit Code = 139
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+<<entering SECCOMP mode>>
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+=== TEST 3 ===
+. .. cerr code.c def.h EasySandbox.so err out runcode.sh shield.c submission14 timeout /var/www/codecracker/tester/jail-428
+Exit Code = 139
+Time: 0.00 s
+Runtime Error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+<<entering SECCOMP mode>>
+SHJ_FINISHED CPU 0.00 MEM 0 MAXMEM -1 STALE 0
+
+Score from 10000: 0

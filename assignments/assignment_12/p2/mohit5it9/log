@@ -1,0 +1,72 @@
+cd /var/www/codecracker/tester;
+./tester.sh /var/www/codecracker/assignments/assignment_12/p2 'mohit5it9' 'submission_69' 'submission_69' c 1 2 50000 1048576 diff -bB 1 1 0 0 1
+Starting tester...
+Tue Apr  8 23:31:37 IST 2014
+Language: c
+Time Limit: 1 s
+Memory Limit: 50000 kB
+Output size limit: 1048576 bytes
+EasySandbox: true
+C/C++ Shield: false
+Compiling as c
+Enabling EasySandbox
+Compiled. Exit Code=0
+
+Testing...
+9 Tests Cases
+
+=== TEST 1 ===
+. .. cerr code.c EasySandbox.so err runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 2 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 3 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 4 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 5 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 6 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 7 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 8 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+=== TEST 9 ===
+. .. cerr code.c correctout EasySandbox.so err out runcode.sh submission69 timeout /var/www/codecracker/tester/jail-12534
+Exit Code = 0
+Time: 0.00 s
+WRONG
+
+Score from 10000: 0
