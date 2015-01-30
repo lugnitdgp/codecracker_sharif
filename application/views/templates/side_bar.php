@@ -83,8 +83,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        		<!--<a target="_blank" href="http://mkti.in">
 			<img src="<?php echo base_url('assets/images/mukti_logo.png'); ?>" width="100%" height="80%"/>
 		</a>-->
-       		<a target="_blank" href="http://letsintern.com">
-			<img src="<?php echo base_url('assets/images/sponsor_logo.png'); ?>" width="100%"/>
+       		<a target="_blank" href="http://www.mkti.in/">
+			<img src="<?php echo base_url('assets/images/sponsor_logo.png'); ?>" width="90%" style="padding-left:10px"/>
 		</a>
 
 		<p>
