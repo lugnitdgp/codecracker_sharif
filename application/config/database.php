@@ -86,7 +86,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',  // database host
 	'username' => 'root',           // database username
 	'password' => 'mukti123!',           // database password
-	'database' => 'codecracker14',           // database name
+	'database' => 'codecracker_15',           // database name
 	'dbprefix' => 'cc_',       // table prefix
 	/**********************************************/
 
